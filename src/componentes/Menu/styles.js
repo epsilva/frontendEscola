@@ -45,26 +45,23 @@ export const ProductList = styled.ul`
   grid-gap: 20px;
   list-style: none;
 
-  li {
-    display: flex;
-    flex-direction: row;
-    width: 180px;
-    padding: 10px;
-    padding-left: 30px;
-    cursor: pointer;
-    
-    transition: background 0.2s;
-    &:hover {
-        background: #616161;
+    li {
+        display: flex;
+        flex-direction: row;
+        width: 180px;
+        padding: 10px;
+        padding-left: 30px;
+        cursor: pointer;
+        
+        transition: background 0.2s;
+        &:hover {
+            background: #616161;
+        }
+        strong {
+        color: #eee;
+        font-weight: bold;
+        padding-top: 8px;
+        
+        }
     }
-    strong {
-      color: #eee;
-      font-weight: bold;
-      padding-top: 8px;
-      
-    
-    }
-
-    }
-  }
 `;
