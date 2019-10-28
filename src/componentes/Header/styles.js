@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.header`
   display: flex;
@@ -8,11 +8,13 @@ export const Container = styled.header`
   position: fixed;
   width: 100%;
   z-index: 1;
-  background: #1976d2;
+  background: #1b1b1b;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.4);
 `;
 
 export const ToogleButton = styled.button`
-    background: none;
-    border: 0
+  background: none;
+  border: 0;
+  padding-left: 10px;
+  padding-right: 10px;
 `;
