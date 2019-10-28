@@ -52,16 +52,17 @@ export const ProductList = styled.ul`
     padding: 10px;
     padding-left: 30px;
     cursor: pointer;
-    transition: background 0.2s;
     
+    transition: background 0.2s;
+    &:hover {
+        background: #616161;
+    }
     strong {
       color: #eee;
       font-weight: bold;
       padding-top: 8px;
-    }
-
-    &:hover {
-      background: "black";
+      
+    
     }
 
     }
