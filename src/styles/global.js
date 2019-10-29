@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 // import background from '../assets/images/background.svg'
 // import 'react-toastify/dist/ReactToastify.css';
@@ -10,6 +10,7 @@ export default createGlobalStyle`
         padding: 0;
         outline: 0;
         box-sizing: border-box;
+        height: 100%;
     }
 
     body {
