@@ -15,10 +15,10 @@ class Home extends Component {
   }
 
   componentWillMount() {
-    const user = this.props.location.state.user;
-    this.setState({
-      user
-    });
+    // const user = this.props.location.state.user;
+    // this.setState({
+    //   user
+    // });
   }
 
 

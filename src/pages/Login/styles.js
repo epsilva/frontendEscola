@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { darken } from 'polished';
 
 export const Container = styled.div`
   height: 100%;
@@ -10,10 +11,21 @@ export const Container = styled.div`
 `;
 
 export const ContainerLeft = styled.div`
-  background: #999;
+  background: #292b36;
+  display: flex;
   float: left;
   width: 130%;
   height: 100%;
+  justify-content: center;
+
+  div {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
 `;
 
 export const ContainerRight = styled.div`
@@ -49,8 +61,32 @@ export const SubmitButton = styled.button`
   border-radius: 4px;
   height: 48px;
   font-size: 16px;
-  background: #616161;
+  background: #292b36;
   font-weight: bold;
   color: #fff;
   cursor: pointer;
+  &:hover {
+      background: ${darken(0.03, '#292b36')}
+  }
+  
+`;
+
+export const LogoImg = styled.img`
+  width: 20%;
+  height: 10%;
+`;
+
+export const LogoName = styled.strong`
+  color: #EEE;
+  font-size: 34px;
+  height: 5%;
+`;
+
+export const SloganName = styled.span`
+  color: #EEE;
+  font-size: 14px;
+`;
+
+export const LogoEscolaImg = styled.img`
+  height: 20%;
 `;
