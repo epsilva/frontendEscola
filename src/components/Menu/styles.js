@@ -31,16 +31,16 @@ export const Badge = styled.button`
 
 export const Container = styled.div`
     position: relative;
+`;
 
-    > divtitle {
-        display: flex;
-        align-items: center;
+export const DivTitleBar = styled.div`
+    display: flex;
+    align-items: center;
 
-        > strong {
-            font-size: 24px;
-            color: #fff;
-            padding-right: 10px;
-        }
+    > strong {
+        font-size: 24px;
+        color: #fff;
+        padding-right: 10px;
     }
 `;
 
@@ -48,11 +48,10 @@ export const ContainerMenu = styled.div`
     margin-left: 0;
     background: ${lighten(0.05, '#3b9eff')};
     border: 10px;
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.4);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.7);
     height: 100%;
     width: 155px;
     position: fixed;
-    z-index: 1;
     display: flex;
     visibility: ${props => (props.visible ? 'visible' : 'hidden')};
     animation: ${props => (props.visible ? fadeIn : fadeOut)} 0.6s forwards;
@@ -94,3 +93,5 @@ export const MenuList = styled.div`
         }
     }
 `;
+
+export const Menu = styled.li``;

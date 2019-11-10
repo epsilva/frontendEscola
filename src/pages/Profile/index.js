@@ -15,6 +15,7 @@ const schema = Yup.object().shape({
     registration: Yup.string()
         .min(6, 'No mínimo 6 caracteres')
         .required('A matrícula é obrigatória'),
+    avatar_id: Yup.number(),
 });
 
 export default function Profile() {

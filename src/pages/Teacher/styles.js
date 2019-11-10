@@ -1,13 +1,14 @@
 import styled, { keyframes } from 'styled-components';
+import { lighten } from 'polished';
 
 const shake = keyframes`
-  10%, 90% {
+  /* 10%, 90% {
     transform: translate3d(-1px, 0, 0);
   }
 
   20%, 80% {
     transform: translate3d(2px, 0, 0);
-  }
+  } */
 
   30%, 50%, 70% {
     transform: translate3d(-4px, 0, 0);
@@ -26,48 +27,67 @@ export const Container = styled.div`
     padding-right: 20px;
     padding-bottom: 20px;
     transition: padding-left 0.6s;
-    /* background: #424242; */
     padding-top: 100px;
     justify-content: center;
-    overflow: scroll;
+    overflow: auto;
 `;
 
-export const ListTeacher = styled.ul`
+export const ContainerTable = styled.div`
+    overflow: auto;
+    height: 88%;
+    background: ${lighten(0.04, '#eaeaeb')};
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 20px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.7);
+
+    table {
+        width: auto;
+    }
+`;
+
+export const ListTeacher = styled.tbody`
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
     list-style: none;
     padding-top: 20px;
+    padding-bottom: 20px;
 `;
 
-export const Teacher = styled.li`
+export const Teacher = styled.tr`
     display: flex;
     flex-direction: row;
-    background: #3b9eff;
-    border-radius: 4px;
+    background: #fff;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.7);
     padding: 20px;
     height: 150px;
     width: 100%;
     cursor: pointer;
     transition: animation 0.82;
 
-    div {
+    td {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding-left: 20px;
-        padding-top: 10px;
+        flex-direction: row;
 
-        > strong {
-            font-size: 16px;
-            line-height: 20px;
-            color: #333;
-            margin-top: 5px;
-        }
-        > span {
-            font-size: 21px;
-            font-weight: bold;
-            margin: 5px 0 20px;
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 20px;
+            padding-top: 10px;
+
+            > strong {
+                font-size: 16px;
+                line-height: 20px;
+                color: #333;
+                margin-top: 5px;
+            }
+            > span {
+                font-size: 14px;
+                font-weight: bold;
+                color: #fb6f91;
+            }
         }
     }
 
@@ -79,12 +99,14 @@ export const Teacher = styled.li`
     }
 
     img {
+        display: flex;
         border: 2px;
         border-radius: 50%;
         height: 80px;
-        width: 80px;
+        width: 70px;
         align-self: center;
-        max-width: 250px;
+        max-width: 85px;
+        max-height: 85px;
     }
 `;
 
@@ -95,7 +117,8 @@ export const TitleSubject = styled.strong`
 `;
 
 export const Header = styled.header`
-    background: #fb6f91;
+    background: #fff;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.7);
     width: 100%;
     height: 80px;
     position: sticky;
@@ -103,7 +126,6 @@ export const Header = styled.header`
     justify-content: space-between;
     align-items: center;
     padding-left: 20px;
-    border-radius: 4px;
 
     i {
         position: absolute;
@@ -113,9 +135,9 @@ export const Header = styled.header`
         border: none;
         margin-right: 20px;
         margin-left: 20px;
-        border-radius: 4px;
-        width: 100px;
-        height: 44px;
+        border-radius: 50%;
+        width: 56px;
+        height: 56px;
         display: flex;
         background: #3b9eff;
         justify-content: center;

@@ -8,7 +8,7 @@ import logo from '../../assets/images/logo.svg';
 import logoEscola from '../../assets/images/logo_escola.svg';
 import animationData from '../../assets/lotties/programming.json';
 import { signInRequest } from '~/store/modules/auth/actions';
-import Load from '~/components/Load';
+import Load from '~/components/LoadBlack';
 
 import {
     SubmitButton,

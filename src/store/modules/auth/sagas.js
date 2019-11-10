@@ -15,8 +15,6 @@ export function* signIn({ payload }) {
 
         const { token, user } = response.data;
 
-        console.tron.log(response.data);
-
         if (!user.provider) {
             toast.error('Usuário não é prestador');
             return;

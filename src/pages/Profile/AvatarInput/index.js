@@ -31,14 +31,13 @@ export default function AvatarInput() {
 
         const { id, url } = response.data;
 
-        console.tron.log(defaultValue);
-
         setFile(id);
         setPreview(url);
-
-        console.tron.log(defaultValue);
-
-        console.tron.log(response.data);
+        registerField({
+            name: 'avatar_id',
+            ref: ref.current,
+            path: 'dataset.file',
+        });
     }
 
     return (

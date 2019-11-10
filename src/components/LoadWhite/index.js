@@ -1,13 +1,12 @@
 import React from 'react';
 import Lottie from 'react-lottie-web';
-import animationBook from '../../assets/lotties/loadingBook.json';
-// import { Container } from './styles';
+import animationBook from '../../assets/lotties/loadingBookWhite.json';
 
-export default function Load() {
+export default function Load({ size }) {
     return (
         <Lottie
-            height={60}
-            width={60}
+            height={size || 60}
+            width={size || 60}
             options={{
                 animationData: animationBook,
             }}
